@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Sales Predictor</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 80px;
+            width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 45px;
+        }
+
+        p {
+            font-size: 20px;
+            opacity: 0.8;
+        }
+
+        input {
+            padding: 15px;
+            width: 300px;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 15px 30px;
+            border: none;
+            background: #22c55e;
+            color: white;
+            font-size: 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .result {
+            margin-top: 30px;
+            font-size: 30px;
+            color: #22c55e;
+            font-weight: bold;
+        }
+
+        img {
+            width: 180px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/2721/2721297.png">
+
+        <h1>AI Sales Predictor</h1>
+
+        <p>Predict future sales using Machine Learning</p>
+
+        <form method="POST">
+            <input type="number" name="ads" placeholder="Enter Ads Spend" required>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+            ₹ {{ prediction }}
+        </div>
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
